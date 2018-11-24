@@ -6,7 +6,7 @@ import Courses from "./courses";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 
 const client = new ApolloClient({
-  uri: ""
+  uri: "http://localhost:4000/graphql"
 });
 
 const App = () => (

@@ -4,6 +4,19 @@ import gql from "graphql-tag";
 
 
 const Courses = () => (
- <div>Hello GraphQL</div>
+    <Query
+    query={gql`
+      {
+       message
+      }
+    `}
+  >
+    {({ loading, error, data }) => {
+        console.log(data);
+      if (loading) return <p>Loading...</p>;
+      if (error) return <p>Error :(</p>;
+        return <div>{data.message}</div>
+    }}
+  </Query>
 );
 export default Courses;
